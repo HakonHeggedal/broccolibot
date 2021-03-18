@@ -25,7 +25,9 @@ async def derp(ctx):
 
 @bot.command()
 async def doubt(ctx):
-    await ctx.message.add_reaction(bot.get_emoji(817367529957752894))
+    kiasu_doubt = bot.get_emoji(817367529957752894)
+    if kiasu_doubt:
+        await ctx.message.add_reaction(kiasu_doubt)
 
 token = open('token.txt', 'r').readline()
 bot.run(token)
