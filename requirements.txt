@@ -1,2 +1,3 @@
-discord==1.6.0
+discord~=1.0.1
 gunicorn==20.0.4
+requests~=2.25.1

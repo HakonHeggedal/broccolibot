@@ -1,11 +1,15 @@
 from discord.ext import commands
 
+from countbot import Count
+from searchbot import Search
 from tictactoebot import TicTacToe
+
 
 bot = commands.Bot(command_prefix='!')
 
-
 bot.add_cog(TicTacToe(bot))
+bot.add_cog(Count())
+bot.add_cog(Search())
 
 
 @bot.event
@@ -16,11 +20,6 @@ async def on_ready():
 @bot.command()
 async def hello(ctx):
     await ctx.send("Hello!")
-
-
-@bot.command()
-async def derp(ctx):
-    await ctx.send("derp!")
 
 
 @bot.command()
