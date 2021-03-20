@@ -1,15 +1,16 @@
 from discord.ext import commands
 
 from countbot import Count
+from pibot import PiCommands
 from searchbot import Search
 from tictactoebot import TicTacToe
-
 
 bot = commands.Bot(command_prefix='!')
 
 bot.add_cog(TicTacToe(bot))
 bot.add_cog(Count())
 bot.add_cog(Search())
+bot.add_cog(PiCommands())
 
 
 @bot.event
